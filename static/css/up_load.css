@@ -1,0 +1,119 @@
+.upload_header{
+    background-color: rgb(245, 245, 247);
+    height: 60px;
+    font-family: Calibriourier;
+    font-size: 30px;
+}
+.upload_title{
+    border-radius: 25px;
+    border: 0;
+    outline: none;
+    /*background: #eee;*/
+    padding: 20px;
+    margin-left: 30px;
+    margin-top: 50px;
+    height: 60px;
+    width: 50%;
+    font-size: 35px;
+    font-family: "Arial";
+}
+.upload_title_line {
+    background: rgb(73, 80, 87);
+    height: 6px;
+    width: 36.5%;
+    margin-top: 1.5rem;
+    margin-left: 35px;
+    margin-bottom: 1rem;
+    border-radius: 1px;
+}
+.upload_sec_line{
+    display: flex;
+}
+.upload_category{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 250px;
+}
+.upload_start_money{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.upload_file{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.upload_file {
+    width: 150px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#upload_file_button {
+  display: none;
+}
+/*게시물 내용*/
+.upload_comment{
+    /*background: chartreuse;*/
+    height: 600px;
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 30px;
+    white-space: pre-wrap;
+    border: none;
+    resize: none;
+    outline: none;
+    /*overflow: hidden;*/
+    font-size: 25px;
+}
+/*게시물 내용*/
+/*스크롤*/
+.upload_comment::-webkit-scrollbar {
+    width: 5px;  /* 스크롤바의 너비 */
+}
+.upload_comment::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: black; /* 스크롤바의 색상 */
+
+    border-radius: 10px;
+}
+
+.upload_comment::-webkit-scrollbar-track {
+    background: #eee;
+}
+/*스크롤*/
+
+.upload_comment_buttons{
+    /*background: chartreuse;*/
+    display: flex;
+    box-shadow: 1px 5px 5px 5px gray;
+    position: fixed;
+    bottom: 0px;
+    z-index: 15;
+    margin-top: 15px;
+    width: 51%;
+    height: 5%;
+    padding: 5px;
+}
+.upload_comment_buttons > button{
+    border-radius: 10px;
+}
+.upload_comment_buttons2{
+    bottom: 0px;
+    z-index: 10;
+    display: inline-block;
+    margin-left: 38%;
+    height: 1px;
+}
+.upload_comment_buttons2 > button{
+    border-radius: 10px;
+
+}
