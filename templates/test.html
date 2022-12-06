@@ -1,0 +1,4 @@
+sql = """select * from TableName"""
+curs.execute(sql)
+select = list(curs.fetchall())
+db.commit()
