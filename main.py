@@ -30,23 +30,6 @@ def upload_button():
     db.commit()
     return jsonify({'msg': '게시됨!!'})
 
-# @app.route("/upload", methods=["POST"])
-# def upload_idea():
-#     id_receive = request.form['id_give']
-#     title_receive = request.form['title_give']
-#     category_receive = request.form['category_give']
-#     won_receive = request.form['won_give']
-#     date_receive = request.form['date_give']
-#     comment_receive = request.form['comment_give']
-#     file_receive = request.form['file_give']
-#     sql = '''
-#         insert into upload(
-#         id_receive,'title_receive','category_receive','won_receive','date_receive','comment_receive'
-#         ,'file_receive');'''
-#         # cur.execute(sql)
-#     db.commit()
-
-
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port='5000', debug=True)
