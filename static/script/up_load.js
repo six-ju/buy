@@ -11,17 +11,14 @@ let date = today.getDate();
 let hours = today.getHours(); // 시
 let minutes = today.getMinutes();  // 분
 let seconds = today.getSeconds();  // 초
-console.log(year)
-console.log(month)
-console.log(date)
 now_date = (year+'-'+month+'-'+date+'-'+hours+'-'+minutes+'-'+seconds)
-console.log(now_date)
 function upload_button() {
+    let upload_id = $('#upload_id').val()
     let title = $('#title').val()
     let category = $('#category').val()
-    let won = $('#won').val()
+    let start_price = $('#start_price').val()
     let date = now_date
-    let comment = $('#comment').val()
+    let comment = $('#content').val()
 
 
 
@@ -35,21 +32,26 @@ function upload_button() {
         $("#category").focus();
         return false;
     }
-    if ($("#won").val().length == 0 || $("#won").val() == "0") {
+    if ($("#start_price").val().length == 0 || $("#start_price").val() == "0") {
         alert("시작 금액을 정해주세요");
-        $("#won").focus();
+        $("#start_price").focus();
         return false;
     }
-    if ($("#comment").val().length == 0) {
+    if ($("#upload_id").val().length == 0){
+        alert("이메일을 작성해주세요");
+        $("#upload_id").focus();
+        return false;
+    }
+    if ($("#content").val().length == 0) {
         alert("내용을 써주세요");
-        $("#comment").focus();
+        $("#content").focus();
         return false;
     }
 
     $.ajax({
         type: 'POST',
         url: '/upload',
-        data: {title_give: title,category_give: category,won_give: won,date_give: date, comment_give: comment},
+        data: {upload_id_give: upload_id, title_give: title,category_give: category,start_price_give: start_price,date_give: date, content_give: content},
         success: function (response) {
             alert(response['게시됨!'])
             window.location.reload()

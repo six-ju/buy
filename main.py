@@ -11,20 +11,21 @@ def home():
 
 @app.route("/upload", methods=["POST"])
 def upload_button():
-    title = request.form['title_give']
-
-    category = request.form['category_give']
-    won = request.form['won_give']
     date = request.form['date_give']
-    comment = request.form['comment_give']
+    upload_id = request.form['upload_id_give']
+    title = request.form['title_give']
+    category = request.form['category_give']
+    start_price = request.form['start_price_give']
+    content = request.form['content_give']
 
     sql = """
             INSERT INTO upload VALUES(
+            '""" + str(date) + """',
+            '""" + str(upload_id) + """',
             '""" + str(title) + """',
             '""" + str(category) + """',
-            '""" + str(won) + """',
-            '""" + str(date) + """',
-       '""" + str(comment) + """');"""
+            '""" + str(start_price) + """',
+       '""" + str(content) + """');"""
     cur.execute(sql)
     db.commit()
     return jsonify({'msg': '게시됨!!'})
