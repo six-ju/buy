@@ -23,7 +23,7 @@ insert into
  upload( id,title , category, won,date, comment,file)
  value('1','안녕못해','2',3,221206,'1','');"""
 
-
+ 
 
 # 5. SQL 구문 실행하기
 cur.execute(sql)
