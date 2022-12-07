@@ -18,7 +18,7 @@ function upload_button() {
     let category = $('#category').val()
     let start_price = $('#start_price').val()
     let date = now_date
-    let comment = $('#content').val()
+    let content = $('#content').val()
 
 
 
