@@ -6,7 +6,7 @@ db = pymysql.connect(host="localhost", user="root", passwd="alex0713", db="aucti
 cur = db.cursor()
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('upload_page.html')
 
 
 @app.route("/upload", methods=["POST"])

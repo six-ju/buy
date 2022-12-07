@@ -52,8 +52,6 @@
     display: flex;
     margin-top: 15px;
     margin-left: 90px;
-}
-.upload_file {
     width: 200px;
     height: 40px;
     background: #fff;
@@ -65,9 +63,10 @@
     align-items: center;
     justify-content: center;
 }
-#upload_file_button {
+#upload_file {
   display: none;
 }
+
 /*게시물 내용*/
 .upload_content{
     /*background: chartreuse;*/

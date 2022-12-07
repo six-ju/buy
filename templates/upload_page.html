@@ -7,13 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/../../static/css/up_load.css">
-    <script defer src="/__/firebase/6.6.2/firebase-storage.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.809.0.min.js"></script>
     <title>업로드 페이지</title>
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="../static/script/up_load.js"></script>
+<script src="../static/script/putFile.js"></script>
+<script src="../static/script/index.js"></script>
 <div class="upload_header">
     <div class="upload_header_name">
         살래요
@@ -41,11 +44,12 @@
                placeholder="금액을 적어주세요." onblur="this.placeholder='금액을 적어주세요.'">
         <span class="input-group-text">원</span>
     </div>
-    <label for="upload_file_button">
+    <label for="upload_file">
         <div class="upload_file">파일 업로드하기</div>
-        <input type="file" name="file" id="upload_file_button">
+        <input type="file" name="file" id="upload_file" >
+         <button id="button">올리기</button>
     </label>
-        <input type="email" id="upload_id" placeholder="이메일 작성해주세요." onblur="this.placeholder='이메일 작성해주세요.'">
+    <input type="email" id="upload_id" placeholder="이메일 작성해주세요." onblur="this.placeholder='이메일 작성해주세요.'">
 
 </div>
 <div>
