@@ -8,7 +8,7 @@ cur = db.cursor()
 def home():
     return render_template('upload_page.html')
 
-
+# db 보내기
 @app.route("/upload", methods=["POST"])
 def upload_button():
     date = request.form['date_give']
@@ -25,9 +25,11 @@ def upload_button():
             '""" + str(title) + """',
             '""" + str(category) + """',
             '""" + str(start_price) + """',
-       '""" + str(content) + """');"""
+       '""" + str(content) + """',
+       );"""
     cur.execute(sql)
     db.commit()
+
     return jsonify({'msg': '게시됨!!'})
 
 
