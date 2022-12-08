@@ -15,6 +15,7 @@
         integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="../static/script/up_load.js"></script>
+<script src="../static/script/out_button.js"></script>
 
 <!--# 헤더 -->
 <div class="upload_header">
@@ -34,10 +35,10 @@
         <select class="form-select" id="category"
                 aria-label="Floating label select example">
             <option selected value="none">카테고리</option>
-            <option value="1">임</option>
-            <option value="2">시</option>
-            <option value="3">카</option>
-            <option value="3">테</option>
+            <option value="it">it</option>
+            <option value="과학">과학</option>
+            <option value="코딩">코딩</option>
+            <option value="경제">경제</option>
         </select>
         <label for="floatingSelect"></label>
     </div>
@@ -50,11 +51,11 @@
 <!--    # 파일 업로더-->
     <label for="upload_file">
         <div class="upload_file">파일 업로드하기</div>
-        <input type="file" name="files" id="upload_file" accept="" >
-    </label>
-    <input type="email" id="upload_id" placeholder="이메일 작성해주세요." onblur="this.placeholder='이메일 작성해주세요.'">
+        <input type="file" name="" id="upload_file" accept="" >
 
+    </label>
 </div>
+
 <!--# 내용 작성-->
 <div>
     <textarea class="upload_content" style="white-space: pre-wrap" id="content"
@@ -63,13 +64,12 @@
 </div>
 <!--# 버튼들-->
 <div class="upload_content_buttons">
-    <button onclick="out_button" type="button" class="btn btn-danger" id="upload_content_out">나가기</button>
-    <div class="upload_content_buttons2">
-        <button onclick="save_button" type="button" class="btn btn-secondary" id="upload_content_tempo">임시 저장</button>
-        <button onclick="upload_button()" type="button" class="btn btn-primary" id="upload_content_save">등록 하기</button>
-    </div>
+    <button onclick="upload_button()" type="button" class="btn btn-primary" id="upload_content_save">등록 하기</button>
+    <button onclick="history.back();" type="button"  class="btn btn-danger" id="upload_content_out">나가기</button>
+
 </div>
 </body>
+<script> let download_upload_files=''</script>
 <script src="../static/script/putFile.js"></script>
 <script src="../static/script/upload_content_save.js"></script>
 </html>

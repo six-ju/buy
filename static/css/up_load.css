@@ -1,18 +1,19 @@
-.upload_header{
+.upload_header {
     background-color: rgb(247, 247, 246);
     height: 60px;
     font-size: 30px;
     top: 0px;
 
 }
-.upload_header_name{
-    font-family: 'Apple SD Gothic Neo',arial,cursive;
+
+.upload_header_name {
+    font-family: 'Apple SD Gothic Neo', arial, cursive;
     margin-left: 60px;
-    top: 10px ;
+    top: 10px;
     position: relative;
 }
 
-.upload_title{
+.upload_title {
     border-radius: 25px;
     border: 0;
     outline: none;
@@ -25,6 +26,7 @@
     font-size: 35px;
     font-family: "Arial";
 }
+
 .upload_title_line {
     background: rgb(73, 80, 87);
     height: 6px;
@@ -34,21 +36,25 @@
     margin-bottom: 1rem;
     border-radius: 1px;
 }
-.upload_sec_line{
+
+.upload_sec_line {
     display: flex;
 }
-.upload_category{
+
+.upload_category {
     display: flex;
     margin-top: 15px;
     margin-left: 30px;
     width: 250px;
 }
-.upload_start_money{
+
+.upload_start_money {
     display: flex;
     margin-top: 15px;
     margin-left: 50px;
 }
-.upload_file{
+
+.upload_file {
     display: flex;
     margin-top: 15px;
     margin-left: 90px;
@@ -63,12 +69,13 @@
     align-items: center;
     justify-content: center;
 }
+
 #upload_file {
-  display: none;
+    display: none;
 }
 
 /*게시물 내용*/
-.upload_content{
+.upload_content {
     /*background: chartreuse;*/
     height: 600px;
     width: 50%;
@@ -81,11 +88,13 @@
     /*overflow: hidden;*/
     font-size: 25px;
 }
+
 /*게시물 내용*/
 /*스크롤*/
 .upload_content::-webkit-scrollbar {
-    width: 5px;  /* 스크롤바의 너비 */
+    width: 5px; /* 스크롤바의 너비 */
 }
+
 .upload_content::-webkit-scrollbar-thumb {
     height: 30%; /* 스크롤바의 길이 */
     background: black; /* 스크롤바의 색상 */
@@ -96,11 +105,12 @@
 .upload_content::-webkit-scrollbar-track {
     background: #eee;
 }
+
 /*스크롤*/
 
-.upload_content_buttons{
-    display: flex;
-    box-shadow:  0 2px 5px 1px rgb(64 60 67 / 50%);
+.upload_content_buttons {
+    /*display: flex;*/
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 50%);
     position: fixed;
     bottom: 0px;
     z-index: 15;
@@ -109,29 +119,28 @@
     height: 6%;
     padding: 5px;
 }
-.upload_content_buttons > button{
+
+
+.upload_content_buttons > button {
+     display: inline-block;
+  vertical-align: middle;
     border-radius: 10px;
-    position: relative;
-    top: 5px;
-    margin: 1px;
-    margin-left: 30px;
-    /*margin-left: auto;*/
+    width: 120px;
+    margin-left: 15px;
+    margin-right:10px;
+    float: right;
 }
-.upload_content_buttons2{
-    bottom: 0px;
-    z-index: 10;
-    display: inline-block;
-    /*margin-left: 68%;*/
-    height: 1px;
-    margin-left: auto;
-
-}
-.upload_content_buttons2 > button{
-    border-radius: 10px;
-    position: relative;
-    top: 5px;
-    width: auto;
-
-
-
-}
+/*.upload_content_buttons2{*/
+/*    bottom: 0px;*/
+/*    z-index: 10;*/
+/*    display: inline-block;*/
+/*    !*margin-left: 68%;*!*/
+/*    height: 1px;*/
+/*    margin-left: auto;*/
+/*}*/
+/*.upload_content_buttons2 > button{*/
+/*    border-radius: 10px;*/
+/*    position: relative;*/
+/*    top: 5px;*/
+/*    width: auto;*/
+/*}*/

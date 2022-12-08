@@ -28,13 +28,13 @@ const putFile = file => {
     }
   );
   const download_upload_files = 'https://'+albumBucketName+'.s3.'+region+'.amazonaws.com/'+profil_key
-  $.ajax({
-    type: 'POST',
-    url: '/upload',
-    data: {download_upload_files_give:download_upload_files},
-    success: function (response) {
-        alert(response['msg'])
-        window.location.reload()
-    }
-  })
+  // $.ajax({
+  //   type: 'POST',
+  //   url: '/image_url',
+  //   data: {download_upload_files_give:download_upload_files},
+  //   success: function (response) {
+  //       alert(response['msg'])
+  //       window.location.reload()
+  //   }
+  // })
 };

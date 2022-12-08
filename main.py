@@ -16,36 +16,24 @@ def upload_button():
     category = request.form['category_give']
     start_price = request.form['start_price_give']
     content = request.form['content_give']
-    download_upload_files = request.form['download_upload_files_give']
+    upload_files = request.form['files_give']
 
     sql = """
             INSERT INTO content VALUES(
-            '""" + str(date) + """',
-                    null,
+            null,   
+            '""" + str(date) + """',           
             '""" + str(title) + """',
             '""" + str(category) + """',
             '""" + str(start_price) + """',
             '""" + str(content) + """',
                         1 ,
-            '""" + str(download_upload_files)+"""'
+                '"""+str(upload_files)+"""'
+          
        );"""
     cur.execute(sql)
     db.commit()
     return jsonify({'msg': '게시됨!!'})
 
-
-#
-
-# @app.route('/image_url', methods=['POST'])
-# def image_url():
-#     download_upload_files = request.form['download_upload_files_give']
-#     sql = """
-#             INSERT INTO content(upload_files)VALUES(
-#             '"""+str(download_upload_files)+"""'
-#        );"""
-#     cur.execute(sql)
-#     db.commit()
-#     return jsonify({'msg': '수정 완료!'})
 
 
 if __name__ == '__main__':
