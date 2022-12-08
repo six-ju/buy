@@ -21,7 +21,6 @@ function upload_button() {
     let content = $('#content').val()
 
 
-
     if ($("#title").val().length == 0) {
             alert("제목은 필수입니다");
             $("#title").focus();
@@ -51,9 +50,10 @@ function upload_button() {
     $.ajax({
         type: 'POST',
         url: '/upload',
-        data: {upload_id_give: upload_id, title_give: title,category_give: category,start_price_give: start_price,date_give: date, content_give: content},
+        data: {upload_id_give: upload_id, title_give: title,category_give: category,
+            start_price_give: start_price,date_give: date, content_give: content},
         success: function (response) {
-            alert(response['게시됨!'])
+            alert(response['msg'])
             window.location.reload()
         }
     })
