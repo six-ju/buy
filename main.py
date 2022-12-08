@@ -12,35 +12,40 @@ def home():
 @app.route("/upload", methods=["POST"])
 def upload_button():
     date = request.form['date_give']
-    upload_id = request.form['upload_id_give']
     title = request.form['title_give']
     category = request.form['category_give']
     start_price = request.form['start_price_give']
     content = request.form['content_give']
-    
+    download_upload_files = request.form['download_upload_files_give']
 
     sql = """
-            INSERT INTO upload VALUES(
+            INSERT INTO content VALUES(
             '""" + str(date) + """',
-            '""" + str(upload_id) + """',
+                    null,
             '""" + str(title) + """',
             '""" + str(category) + """',
             '""" + str(start_price) + """',
             '""" + str(content) + """',
-                        (1)
+                        1 ,
+            '""" + str(download_upload_files)+"""'
        );"""
     cur.execute(sql)
     db.commit()
-
     return jsonify({'msg': '게시됨!!'})
 
-@app.route('/image_url', methods=['POST'])
-def image_url():
-    profil_url = request.form['url_give']
-    sql = "UPDATE user_info SET user_profil = %s where id = 1"
-    cur.execute(sql,(profil_url))
-    db.commit()
-    return jsonify({'msg': '수정 완료!'})
+
+#
+
+# @app.route('/image_url', methods=['POST'])
+# def image_url():
+#     download_upload_files = request.form['download_upload_files_give']
+#     sql = """
+#             INSERT INTO content(upload_files)VALUES(
+#             '"""+str(download_upload_files)+"""'
+#        );"""
+#     cur.execute(sql)
+#     db.commit()
+#     return jsonify({'msg': '수정 완료!'})
 
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 });
+
 // now_date = new Date().toLocaleDateString();
 // document.write(now_date);
 
@@ -34,11 +35,6 @@ function upload_button() {
     if ($("#start_price").val().length == 0 || $("#start_price").val() == "0") {
         alert("시작 금액을 정해주세요");
         $("#start_price").focus();
-        return false;
-    }
-    if ($("#upload_id").val().length == 0){
-        alert("이메일을 작성해주세요");
-        $("#upload_id").focus();
         return false;
     }
     if ($("#content").val().length == 0) {
