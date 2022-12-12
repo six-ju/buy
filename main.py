@@ -10,7 +10,7 @@ def home():
 
 # db 보내기
 @app.route("/upload", methods=["POST"])
-def upload_button():
+def upload():
     date = request.form['date_give']
     title = request.form['title_give']
     category = request.form['category_give']

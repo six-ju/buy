@@ -27,7 +27,7 @@ const putFile = file => {
       return console.log("There was an error uploading your photo: ", err.message);
     }
   );
-  const download_upload_files = 'https://'+albumBucketName+'.s3.'+region+'.amazonaws.com/'+profil_key
+  // const download_upload_files = 'https://'+albumBucketName+'.s3.'+region+'.amazonaws.com/'+profil_key
   // $.ajax({
   //   type: 'POST',
   //   url: '/image_url',

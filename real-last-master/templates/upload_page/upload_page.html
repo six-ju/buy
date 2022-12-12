@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">-->
+<!--    <link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/../../static/css/up_load.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.809.0.min.js"></script>
+    <title>업로드 페이지</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="../../static/js/up_load.js"></script>
+
+<!--# 헤더 -->
+<div class="upload_header">
+    <div class="upload_header_name">
+        살래요
+    </div>
+</div>
+
+<!--# 제목 작성-->
+<input class="upload_title" id="title"
+       placeholder="제목을 입력하세요." onfocus="this.placeholder=''"
+       onblur="this.placeholder='제목을 입력하세요.'">
+<div class="upload_title_line"></div>
+<div class="upload_sec_line">
+<!--    # 카테고리-->
+    <div class="upload_category" id="categry">
+        <select class="form-select" id="category"
+                aria-label="Floating label select example">
+            <option selected value="none">카테고리</option>
+            <option value="it">it</option>
+            <option value="과학">과학</option>
+            <option value="코딩">코딩</option>
+            <option value="경제">경제</option>
+        </select>
+        <label for="floatingSelect"></label>
+    </div>
+<!--# 금액 작성-->
+    <div class="upload_start_money">
+        <input type="number" id="start_price" class="form-control" aria-label="Amount (to the nearest dollar)"
+               placeholder="금액을 적어주세요." onblur="this.placeholder='금액을 적어주세요.'">
+        <span class="input-group-text">원</span>
+    </div>
+<!--    # 파일 업로더-->
+    <label for="upload_file">
+        <div class="upload_file">파일 업로드하기</div>
+        <input type="file" name="" id="upload_file" accept="" >
+
+    </label>
+</div>
+
+<!--# 내용 작성-->
+<div>
+    <textarea class="upload_content" style="white-space: pre-wrap" id="content"
+              placeholder="내용을 작성해주세요...!" onfocus="this.placeholder=''"
+              onblur="this.placeholder='내용을 작성해주세요...!'"></textarea>
+</div>
+<!--# 버튼들-->
+<div class="upload_content_buttons">
+    <button onclick="upload_button()" type="button" class="btn btn-primary" id="upload_content_save">등록 하기</button>
+    <button onclick="history.back();" type="button"  class="btn btn-danger" id="upload_content_out">나가기</button>
+
+</div>
+</body>
+    <script> let download_upload_files=''</script>
+    <script src="../../static/js/putFile.js"></script>
+    <script src="../../static/js/upload_content_save.js"></script>
+</html>

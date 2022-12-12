@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.809.0.min.js"></script>
+    <script>
+        function edit_info(){
+            let user_name = $('#user_name').val()
+            let user_id = $('#user_id').val()
+            let user_pw = $('#user_pw').val()
+            $.ajax({
+                type: 'PUT',
+                url: '/edit_info',
+                data: {name_give:user_name,id_give:user_id,pw_give:user_pw},
+                success: function (response) {
+                    console.log(user_name,user_id,user_pw)
+                    alert(response['msg'])
+                    window.close()
+                }
+            })
+        }
+    </script>
+    </head>
+<body>
+    <div class="card">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">name</span>
+            <input id = "user_name" type="text" class="form-control" placeholder="edit your name" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">id</span>
+            <input id = "user_id" type="text" class="form-control" placeholder="edit your id" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">password</span>
+            <input id = "user_pw" type="password" class="form-control" placeholder="edit your password" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <button onclick="edit_info()"class="btn btn-outline-secondary" type = "button" id = "edit_info">프로필 수정</button>
+    </div>
+    <div>
+        <div class="input-group">
+            <input type="file" class="form-control" id="files" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="image/*">
+            <button class="btn btn-outline-secondary" type="button" id="profil_button">프로필사진 수정</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/profil_button.js') }}" > </script>
+    <script src="{{ url_for('static', filename='js/put_image.js') }}" > </script>
+</body>
+</html>

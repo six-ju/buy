@@ -1,0 +1,73 @@
+ul li {
+  list-style: none;
+}
+#modal {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#modal h2 {
+  margin: 0;
+}
+
+#modal button {
+  background-color: transparent;
+  border: transparent;
+  height: 10px;
+  font-size: 20px;
+}
+
+#modal .modal_content {
+  width: 60%;
+  height: 100%;
+  margin: 100px auto;
+  background: #fff;
+  border: 1px solid #baddf9;
+}
+
+#modal .modal_layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.modal_header {
+  padding: 20px;
+  background-color: #baddf9;
+  display: flex;
+  justify-content: space-between;
+}
+.modal_time {
+  background-color: #edffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.modal_detail_content {
+  margin: 0;
+  padding: 20px;
+}
+.modal_comment {
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.post_comment_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.before_post {
+  display: block;
+}
+
+.like_people_icon {
+  height: 15px;
+}

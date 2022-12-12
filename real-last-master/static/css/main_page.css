@@ -1,0 +1,261 @@
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    position: sticky;
+    top:0;
+}
+
+.search {
+    float: left;
+    width: 300px;
+    height: 100px;
+    margin-left: 750px;
+
+}
+
+.search input {
+    width: 80%;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+.search button {
+    font-size: 18px;
+    border: none;
+    background-color: green;
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.writeBox {
+    font-family: 'Gaegu', cursive;
+    margin-left: 1750px;
+    font-size: 40px;
+}
+
+.d-flex {
+    width: 500px;
+}
+
+.profile_category_box{
+    margin-top: 20px;
+    margin-left: 20px;
+    position: fixed;
+    float: left;
+    height: 700px;
+}
+
+.profile_card {
+    width: 200px;
+    height: 250px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+
+    overflow:hidden
+
+}
+
+.card-title {
+    text-align: center;
+}
+
+.cardBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+#btn {
+    margin-bottom: 10px;
+}
+
+#category_card {
+
+    width: 200px;
+    height: 300px;
+}
+
+#category_card h2 {
+    margin-left: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#category_card ul li {
+    list-style: none;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.gory {
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 8px;
+
+    margin-bottom: 10px;
+    text-align: center;
+
+    height: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+}
+
+.gory:hover {
+    border: 2px solid lightgrey;
+}
+
+.feed_card {
+    margin: 100px auto 0 auto;
+    width: 1000px;
+    height: 500px;
+    padding: 20px;
+
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+}
+
+.feed_card:hover {
+    box-shadow: 5px 5px gray;
+}
+
+.feed_card > h2 {
+    font-weight: bold;
+
+}
+.feed_card > h5 {
+    float: left;
+}
+
+.feed_card > h6 {
+    float: right;
+    margin-left: 20px;
+}
+
+.bodyBox {
+    height: 320px;
+    width: 950px;
+    margin: 0 auto 0 auto;
+
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+
+    line-height: 1.8em;
+    max-height: 30em;
+    white-space: pre-line;
+}
+
+.likeBox {
+    background-color: #E0FFFF;
+
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    margin: 20px 0 0 10px;
+    padding-top: 2px;
+
+    font-weight: bold;
+
+    float: left;
+}
+
+.likeBox:hover {
+    border: 3px solid lightgrey;
+}
+
+.commentBox {
+    background-color: #E0FFFF;
+
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    height: 30px;
+    width: 100px;
+
+    text-align: center;
+    margin: 20px 0 0 10px;
+    padding-top: 2px;
+
+    float: left;
+
+    font-weight: bold;
+}
+
+.commentBox:hover {
+    border: 3px solid lightgrey;
+}
+
+.deadline {
+    background-color: #E0FFFF;
+
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    float: right;
+
+    margin: 20px 0 0 10px;
+
+    font-weight: bold;
+}
+
+.currentState {
+    background-color: #E0FFFF;
+
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    float: right;
+
+    margin: 20px 0 0 10px;
+
+    font-weight: bold;
+}
+
+.price {
+    background-color: #E0FFFF;
+
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    float: right;
+
+    margin: 20px 0 0 10px;
+
+    font-weight: bold;
+}
+
+.price:hover {
+    border: 3px solid lightgrey;
+}

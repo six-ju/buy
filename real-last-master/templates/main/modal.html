@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/modal.css"/>
+    <script defer src="../../static/js/modal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+            get_modal()
+        })
+        function modal() {
+            $.ajax({
+                type: "GET",
+                url: "/modal",
+                data: {},
+                success: function (response) {
+                    let final_date = rows[1231][123]
+                    let real_final_date = final_data - 현재값
+                    let comment_date = 
+                    let temp_html = ``
+                    $('#root').append(temp_html)
+                }
+            });
+        }
+        function modal_comment() {
+            let comment = $('#post_comment_input').val()
+            let date = 현재시간
+            $.ajax({
+                type: "POST",
+                url: "/modal_comment",
+                data: {comment_give:comment,date_give:date},
+                success: function (response) {
+                  alert(response['msg'])
+                  window.location.reload()
+                }
+            });
+        }
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <button type="button" id="modal_open_btn">모달 창 열기</button>
+      <button type="button" id="modal_close_btn" style="float:right">x</button>
+    </div>
+    <container id="modal">
+      <div class="modal_content">
+        <header class="modal_header">
+          <div>
+            <h3>${title}</h3>
+            <hr />
+            <p>${name}</p>
+          </div>
+        </header>
+        <div class="modal_time">
+          <div>${re_price}</div>
+          <div>${real_final_date}</div>
+        </div>
+        <section class="modal_detail_content">
+          <span>${content}</span>
+        </section>
+        <hr />
+        <section class="users_feed_list">
+          <article class="user_feed">
+            <header style="padding:20px;">
+            </ul>
+            <a href="#" ><img src="{{ url_for('static', filename='img/heart.'png') }}" class="like_people_icon"></a>
+            <!-- <a href="#" class="like_people">좋아요 <em>12,020개</em></a> -->
+            <button onclick>살래요</button>
+            <section class="feed_desc_wrap">
+              <ul class="comment_list">
+                <li>
+                  <div class="user_desc">
+                    <em>${comment_id}</em>
+                    <span>${comment_content}</span>
+                  </div>
+                  <!-- <button><i class="far fa-heart fa-xs"></i></button> -->
+                </li>
+              </ul>
+              <time class="before_post">${comment_date}</time>
+              <a href="#" class="more_comment">댓글 <b>120개</b> 모두 보기</a>
+            </section>
+            <section class="post_comment_wrap">
+              <input
+                id="post_comment_input"
+                type="text"
+                placeholder="댓글 달기..."
+              />
+              <button onclick="modal_comment" id="post_comment_btn">게시</button>
+            </section>
+          </article>
+        </section>
+      </div>
+    </container>
+  </body>
+</html>
