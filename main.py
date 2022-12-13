@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import pymysql
 
 app = Flask(__name__)
-db = pymysql.connect(host="localhost", user="root", passwd="alex0713", db="auction", charset="utf8")
+db = pymysql.connect(host="localhost", user="root", passwd="", db="auction", charset="utf8")
 cur = db.cursor()
 @app.route('/')
 def home():
